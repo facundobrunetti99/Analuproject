@@ -180,8 +180,16 @@
     display: flex;
     width: 98%;
     justify-content: space-around;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
     text-align: center;
+}
+.item--product--ref--prd{
+    display: block;
+  text-align: center;
+  margin-bottom: 80px;
+  color: #3e312f;
+  font-size: 15px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .item--product--descrp{
     border: 1px groove var(--bck--color);
@@ -196,6 +204,7 @@
     object-fit: cover;
    border-radius: 15px;
 }
+
 .item--product--descrp{
     padding: 15px;
     font-size: 15px;
@@ -293,4 +302,39 @@
     width: 100%;
     object-fit: cover;
     height: 500px;
+}
+.div--footer--items{
+    height: 500px;
+    justify-content: space-around;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    z-index: 5;
+    flex-direction: column;
+}
+.footer--title{
+    z-index: 4;
+    color: #fff;
+    font-size: 50px;
+    font-family:'Satisfy', 'cursive';
+}
+.footer--content--div{
+    z-index: 4;
+    display: flex;
+    justify-content: space-around;
+}
+.footer--content--div--icon{
+    z-index: 4;
+}
+.footer--content{
+    color: #fff;
+    font-size: 22px;
+    opacity: 90%;
+}
+.footer--content span{
+    opacity: 90%;
+  color: #ebebeb;
+}
+.footer--content--div--icon svg{
+  margin: 0 10px;
 }
