@@ -216,16 +216,11 @@
  
 }
 
-
- 
-
-.addtocartItem{
-    
+.addtocartItem{  
    font-size: 18px;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    color: #fff;
    background-color: #000;
-  
    border: none;
    cursor: pointer;
    margin-top: 15px !important;
@@ -476,21 +471,42 @@
     padding: 5px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+.conteiner--cant--element{
+    border: 1px solid var(--bck--color);
+    padding: 5px;
+}
+.conteiner--cant--element button{
+        width: 20px;
+        height: 20px;
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+        font-size: 22px;
+        color: #f105f9;
+}
 
-#input--cant--item{
-    width: 40px;
+.input--value{
+    border: none;
+    width: 30px;
+    text-align: center;
     height: 20px;
+    outline: none;
    
 }
 .cart-button--delete{
-    width: 40px;
-    height: 24px;
- 
+    width: 50px;
+    height: 30px;
+ background-color: #fff;
     color: #fff;
     border: none;
     cursor: pointer;
-
+    z-index: 5;
 }
+.cart-button--delete svg{
+    z-index: -1;
+    
+}
+
 
 
 /*Form*/
