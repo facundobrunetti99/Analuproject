@@ -5,8 +5,21 @@ const extraerProductos = async () => {
     cargarProductos(data);
   
   };
+
+
+
+
   extraerProductos();
   let cart=[];
+
+  if(localStorage.length>0){
+    cart=JSON.parse(localStorage.getItem("cart"));
+    cantCartProduct=cart.length;
+    let cantItemCart= document.querySelector(".nav--ul-cant");
+    cantItemCart.textContent=cantCartProduct;
+  }
+ 
+
   let products=[];
   const cargarProductos=(data)=>{
         products=data;
@@ -27,10 +40,7 @@ function addItemsCatalog(name,id,img,price){
 
 
 let indexCart=0;
-let cant=0;
 let cantItem=0;
-let cantItemsRep=1;
-let cantItemIgual=1;
 let cantLS;
 
 function addTocart(id){
@@ -38,7 +48,7 @@ function addTocart(id){
     let band=true;
     let band1=false;
     let idItemCart;
-
+   
     if(cart.length!=0){
         cart.forEach((element)=>{
             if(band===true){
@@ -64,11 +74,12 @@ function addTocart(id){
         cart.push(product);
         let itemLS=JSON.stringify(cart);
         localStorage.setItem("cart",itemLS);
-        cant++;
+     
        }else{
             cart.forEach((element ,i)=>{
                 if(band1===false){
                     if(idItemCart===Number(element.id)){
+                     
                        element.cant++;
                       
 
@@ -90,11 +101,13 @@ function addTocart(id){
 
 
 
-    const itemLS=JSON.stringify(cart);
-    localStorage.setItem("cart",itemLS)
-    
-   const cantItemCart= document.querySelector(".nav--ul-cant");
-   cantItemCart.textContent=cant;
+   const itemLS=JSON.stringify(cart);
+   localStorage.setItem("cart",itemLS)
+   let cantCartProduct=cart.length;
+
+
+   let cantItemCart= document.querySelector(".nav--ul-cant");
+   cantItemCart.textContent=cantCartProduct;
 
 }
 
