@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analu</title>
+ 
    <link rel="stylesheet" href="../style/style.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link
@@ -11,6 +12,8 @@
    type="text/css"
    href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
  />
+ 
+
  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </head>
@@ -65,21 +68,22 @@
 
 
             <div class="cart--sending">
-                <form action="" class="cart-sending--form">
+                <div action="" class="cart-sending--form">
                     <label for="email--input">Correo Electronico</label>
-                    <input type="email" name="" id="email--input">
+                    <input type="email" name="" id="email--input" required>
                     <label for="name--input">Nombre</label>
-                    <input type="text" id="name--input">
+                    <input type="text" id="name--input" required>
                     <label for="surname--input">Apellido</label>
-                    <input type="text" id="surname--input">
+                    <input type="text" id="surname--input" required>
                     <label for="dr--input">Direccion</label>
-                    <input type="text" name="" id="dr--input">
+                    <input type="text" name="" id="dr--input" required>
                     <label for="CP--input">Codigo Postal</label>
-                    <input type="text" id="CP--input">
+                    <input type="text" id="CP--input" required>
+        
                     <div class="total--price--cont">
                         <p class="parraf--total">Total</p>
                         <p class="total--price--cart"></p>
-                        <button  class="total--pago">Realizar pago</button>
+                        <input  type="submit"  class="total--pago" value="Realizar pago"></input>
                     </div>
 
                 </form>
@@ -112,8 +116,7 @@
 
         </footer>
     
-
-
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../scripts/cart.js"></script>
     <script
     type="text/javascript"
