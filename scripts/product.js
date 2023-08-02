@@ -163,26 +163,30 @@ function functionSearchItem(event){
 
 }
 
-const buttonFiltr=document.querySelector(".filtr--item");
+/* const buttonFiltr=document.querySelector(".filtr--item");
 buttonFiltr.addEventListener('click',activeMenuFil);
 const downShow=document.querySelector(".svg--show");
 let var1=true;
-let cont=0;
+let cont=1;
 function activeMenuFil(event){
   if(var1===true){
     const item=event.target;
     const divShow=document.querySelector(".catalog--categories");
     divShow.style.display="flex";
+    downShow.style.transition="display 2s ease-in 2s";
     downShow.style.display="none"
-    buttonFiltr.innerHTML=`<span>Filtrar<br></span><svg class="svg--notShow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="m6.293 13.293 1.414 1.414L12 10.414l4.293 4.293 1.414-1.414L12 7.586z"></path></svg>`;
+    buttonFiltr.innerHTML=`<span>Filtrar<br></span><svg class="svg--notShow" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="m6.293 13.293 1.414 1.414L12 10.414l4.293 4.293 1.414-1.414L12 7.586z"></path></svg>`;
     cont++;
-  }
 
- if(cont%2){
+  
+  }
+  console.log(cont)
+ if(cont%2 || cont===0 || cont===1){
   const item=event.target;
   const divShow=document.querySelector(".catalog--categories");
   divShow.style.display="none";
+  downShow.style.transition="display 2s ease-in 2s";
   downShow.style.display=""
   buttonFiltr.innerHTML=`<span>Filtrar <br></span><svg class="svg--show" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>`;
  }
-}
+} */

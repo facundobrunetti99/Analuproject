@@ -52,22 +52,35 @@
 
         <div class="conteiner--catalog--main">
            
-            <button class="filtr--item"><span>Filtrar <br></span><svg class="svg--show" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg></button>
-            <div class="catalog--categories">
-                <div class="nav--div--button">
-                    <input type="text" class="nav--input" placeholder="Buscar Producto" data-aos="fade-down" data-aos-delay="200">
-                    
+            <li class="dropdownlist">
+                <a  class="filtr--item dropdownlink"><span>Filtrar <br></span><svg class="svg--show" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+            
+                    <input type="checkbox" class="dropdowncheck">
+                </a>
+    
+                <div class="catalog--categories">
+                    <div class="dropdownsub">
+                        <div class="nav--div--button">
+                            <input type="text" class="nav--input" placeholder="Buscar Producto" data-aos="fade-down" data-aos-delay="200">
+                            
+                        </div>
+                        <h5 class="catalog--title">Filtrar</h5>
+                        <label class="check--label" for="check1"><input type="checkbox" id="check1" value="checkbox-1" class="check--cat"> Tortas</label>
+                        <label class="check--label" for="check2"><input type="checkbox" id="check2" value="checkbox-2" class="check--cat"> Tartas</label>
+                       <label class="check--label" for="check3"><input type="checkbox" id="check3" value="checkbox-3" class="check--cat"> Ramos de chocolate</label>
+                       <label class="check--label" for="check4"><input type="checkbox" id="check4" value="checkbox-4" class="check--cat"> Box de chocolates</label>
+                       <label class="check--label" for="check5"><input type="checkbox" id="check5" value="checkbox-5" class="check--cat"> Mesas dulces</label>
+                       <label class="check--label" for="check6"><input type="checkbox" id="check6" value="checkbox-6" class="check--cat"> Envios gratis</label>
+                       <label class="check--label" for="check7"><input type="checkbox" id="check7" value="checkbox-7" class="check--cat"> Promociones</label>
+                       <button class="catalog--filter">Filtrar</button>
+        
+                    </div>
+                   
                 </div>
-                <h5 class="catalog--title">Filtrar</h5>
-                <label class="check--label" for="check1"><input type="checkbox" id="check1" value="checkbox-1" class="check--cat"> Tortas</label>
-                <label class="check--label" for="check2"><input type="checkbox" id="check2" value="checkbox-2" class="check--cat"> Tartas</label>
-               <label class="check--label" for="check3"><input type="checkbox" id="check3" value="checkbox-3" class="check--cat"> Ramos de chocolate</label>
-               <label class="check--label" for="check4"><input type="checkbox" id="check4" value="checkbox-4" class="check--cat"> Box de chocolates</label>
-               <label class="check--label" for="check5"><input type="checkbox" id="check5" value="checkbox-5" class="check--cat"> Mesas dulces</label>
-               <label class="check--label" for="check6"><input type="checkbox" id="check6" value="checkbox-6" class="check--cat"> Envios gratis</label>
-               <label class="check--label" for="check7"><input type="checkbox" id="check7" value="checkbox-7" class="check--cat"> Promociones</label>
-               <button class="catalog--filter">Filtrar</button>
-            </div>
+            </li>
+           
+
+
             <div class="conteiner--catalog">
 
                 

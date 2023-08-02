@@ -811,17 +811,59 @@
     justify-content: center;
 
 }
-.catalog--categories{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin: auto;
-    padding: 10px;
-    border: 1px solid var(--bck--color);
-    border-radius: 15px;
-    transition: all 2s ease-in;
-    display: none;
+
+.dropdownlink{
+    position: relative;
 }
+
+.dropdownlist:has(:checked){
+    --rows:1fr;
+    --dropdown:rotate(180deg);
+}
+.dropdowncheck{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    margin-top: -20px;
+}
+.dropdownlink svg{
+    display: block;
+    margin: auto;
+
+}
+.dropdownlink svg{
+    transform: var(--dropdown,0);
+    transition: .3s transform;
+}
+li{
+    list-style: none;
+}
+
+.catalog--categories{
+    display: grid;
+    grid-template-rows: var(--rows,0fr);
+    transition: .8s grid-template-rows;
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+    border: none !important;
+    margin-right: 8px;
+    border-radius: 15px;
+  
+}
+.dropdownsub{
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
 .filtr--item{
 
     display: block;
@@ -832,58 +874,7 @@
     cursor: pointer;
     margin-top: 40px;
 }
-}
 
-.filtr--item span{
-    font-size: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.catalog--title{
-    font-size: 23px;
-    color: #3e312f;
-    margin-bottom: 30px;
-    margin-left: 10px;
-}
-.check--cat:active{
-    background-color: #553733;
-    
-}
-.check--label{
-    font-size: 20px;
-    display: block;
-    margin-bottom: 18px;
-}
-.catalog--filter{
-    width: 100px;
-    height: 30px;
-    width: 80px;
-    background-color: var(--color--text);
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    
-}
-
-.catalog--filter:hover{
-    opacity: 90%;
-}
-.catalog--filter:active{
-    background-color: #553733;
-}
-
-.conteiner--catalog{
-    width: 90%;
-    margin: auto;
-    margin-top: 20px;
-}
-.image--cartHome{
-width: 200px;
-height: 200px;
-}
-.tittle--text{
-font-size: 15px;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
 
 
 
@@ -950,4 +941,62 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 .footer--content--div--icon svg{
   margin: 0 10px;
 }
+
+
+
+
+.filtr--item span{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.catalog--title{
+    font-size: 23px;
+    color: #3e312f;
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+.check--cat:active{
+    background-color: #553733;
+    
+}
+.check--label{
+    font-size: 20px;
+    display: block;
+    margin-bottom: 18px;
+}
+.catalog--filter{
+    width: 100px;
+    height: 30px;
+    width: 80px;
+    background-color: var(--color--text);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    
+}
+
+.catalog--filter:hover{
+    opacity: 90%;
+}
+.catalog--filter:active{
+    background-color: #553733;
+}
+
+.conteiner--catalog{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+.image--cartHome{
+width: 200px;
+height: 200px;
+}
+.tittle--text{
+font-size: 15px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+}
+
+
+
 
