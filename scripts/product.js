@@ -1,5 +1,5 @@
 const extraerProductos = async () => {
-  const resp = await fetch("../JSON/catalog.json");
+  const resp = await fetch("./JSON/catalogo.JSON");
   const data = await resp.json();
   cargarProductos(data);
 };
@@ -183,9 +183,4 @@ let ml=cont%2
       svgItem.innerHTML=`<svg class="svg--menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(139, 67, 56, 1);transform: msFilter"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>`;
     }
     
-  
-
-
-  
-  console.log(cont1%2)
 }
