@@ -33,9 +33,9 @@ function addItemsCatalog(name, id, img, price) {
    <button class="svg--icon"><img class="img--notfav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAR5JREFUSEvFlUEOgjAQRf/gprgzwb2eRD2JehLhJOJJ9Ca6l8SddKNjCkKEFilQY1ekbf7r/52hhB8P+rE+/gO4CrEkz1uDeQngkrlkPgRSxuozEWIDz1s0rX+mojlIfP8IQAmbxuk9aV4nikfPZzSRMj8UUI2oRdzqupg5nEoZaYAsFiJ1+uGDeVvEWUaUjMd7MG+Gq6tcKA7u920losT32Yl4LnIK0nRVB5wBzBxBLkGazqsAlxGZHFyF2BFR6MIBM6+mUmYlXekDRxdd5q8BbkLMHnmp9r2LMntjo6nJARBNXHNQUHtAjOKNgI5OGsW/AiwhX8VbAS2QVnErQAPEStwaUIOg+A3YNGWnJ1NV1+dj4hxgI1jf08lBH8ALdISGGdIfSR8AAAAASUVORK5CYII="/> </button>
     </div>
    
-    <div class="item--product--descrp div--descr--item">
-    <p class="tittle--text"data-aos="fade-down" data-aos-delay="100">${name}</p>
-    <p class="price--text" data-aos="fade-down">$${price}</p>
+    <div class=" div--descr--item">
+    <p class="tittle--text">${name}</p>
+    <p class="price--text" >$${price}</p>
     </div>
     
     <button href="#" onClick="addTocart(${id})"  class="addtocartItem">Agregar al carrito</button>`;
@@ -131,4 +131,58 @@ function addTocart(id) {
 
   let cantItemCart = document.querySelector(".nav--ul-cant");
   cantItemCart.textContent = cantCartProduct;
+}
+
+const searchItem=document.querySelector('.nav--input');
+
+searchItem.addEventListener('keyup',functionSearchItem);
+
+function functionSearchItem(event){
+  const item=event.target;
+  
+  if(item){
+      const titleItem=document.querySelectorAll('.tittle--text');
+      titleItem.forEach((element)=>{
+        const searchTittle=element.textContent.toLocaleLowerCase();
+        const showItem=searchTittle.includes(item.value.toLocaleLowerCase());
+        if(item.value.length>=2){
+          if(!showItem){
+            const div=element.closest('.item--product--descrp');
+            div.style.display="none";
+          }
+          
+        }else{
+          const div=element.closest('.item--product--descrp');
+          div.style.display="";
+        }
+       
+      })
+
+  }
+
+
+}
+
+const buttonFiltr=document.querySelector(".filtr--item");
+buttonFiltr.addEventListener('click',activeMenuFil);
+const downShow=document.querySelector(".svg--show");
+let var1=true;
+let cont=0;
+function activeMenuFil(event){
+  if(var1===true){
+    const item=event.target;
+    const divShow=document.querySelector(".catalog--categories");
+    divShow.style.display="flex";
+    downShow.style.display="none"
+    buttonFiltr.innerHTML=`<span>Filtrar<br></span><svg class="svg--notShow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="m6.293 13.293 1.414 1.414L12 10.414l4.293 4.293 1.414-1.414L12 7.586z"></path></svg>`;
+    cont++;
+  }
+
+ if(cont%2){
+  const item=event.target;
+  const divShow=document.querySelector(".catalog--categories");
+  divShow.style.display="none";
+  downShow.style.display=""
+  buttonFiltr.innerHTML=`<span>Filtrar <br></span><svg class="svg--show" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>`;
+ }
 }
