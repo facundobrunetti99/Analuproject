@@ -1,10 +1,10 @@
 const extraerProductos = async () => {
-  const resp = await fetch("../JSON/catalog.JSON");
+  const resp = await fetch("../data.json");
   const data = await resp.json();
   cargarProductos(data);
 };
 
-extraerProductos();
+
 let cart = [];
 
 if (localStorage.length > 0) {
@@ -21,6 +21,7 @@ if (localStorage.length > 0) {
 }
 
 let products = [];
+extraerProductos();
 let cargarProductos = (data) => {
   products = data;
   products.forEach((element) => {
