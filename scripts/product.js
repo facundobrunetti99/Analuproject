@@ -9,7 +9,7 @@ let cart = [];
 
 if (localStorage.length > 0) {
   let cantItemCart = document.querySelector(".nav--ul-cant");
-  
+  let cantCartProduct=0;
   cart = JSON.parse(localStorage.getItem("cart"));
    if(cart!=null){
     cantCartProduct = cart.length;
@@ -21,7 +21,7 @@ if (localStorage.length > 0) {
 }
 
 let products = [];
-const cargarProductos = (data) => {
+let cargarProductos = (data) => {
   products = data;
   products.forEach((element) => {
     addItemsCatalog(element.name, element.id, element.img, element.price);
