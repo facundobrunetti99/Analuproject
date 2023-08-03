@@ -4,20 +4,18 @@ const extraerProductos = async () => {
   cargarProductos(data);
 };
 
-
 let cart = [];
 
 if (localStorage.length > 0) {
   let cantItemCart = document.querySelector(".nav--ul-cant");
-  let cantCartProduct=0;
+  let cantCartProduct = 0;
   cart = JSON.parse(localStorage.getItem("cart"));
-   if(cart!=null){
+  if (cart != null) {
     cantCartProduct = cart.length;
-
-   }else{
-    cantItemCart=0;
-   }
-   cantItemCart.textContent = cantCartProduct;
+  } else {
+    cantItemCart = 0;
+  }
+  cantItemCart.textContent = cantCartProduct;
 }
 
 let products = [];
@@ -83,14 +81,14 @@ let cantItem = 0;
 let cantLS;
 
 function addTocart(id) {
-    Toastify({
-        duration: 1000,
-        text: "¡Producto agregado! 🤩",
-        className: "info",
-        style: {
-          background: "linear-gradient(to right, #00b09b, #96c93d)",
-        }
-      }).showToast();
+  Toastify({
+    duration: 1000,
+    text: "¡Producto agregado! 🤩",
+    className: "info",
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+    },
+  }).showToast();
   let band = true;
   let band1 = false;
   let idItemCart;
@@ -140,54 +138,47 @@ function addTocart(id) {
   cantItemCart.textContent = cantCartProduct;
 }
 
-const searchItem=document.querySelector('.nav--input');
+const searchItem = document.querySelector(".nav--input");
 
-searchItem.addEventListener('keyup',functionSearchItem);
+searchItem.addEventListener("keyup", functionSearchItem);
 
-function functionSearchItem(event){
-  const item=event.target;
-  
-  if(item){
-      const titleItem=document.querySelectorAll('.tittle--text');
-      titleItem.forEach((element)=>{
-        const searchTittle=element.textContent.toLocaleLowerCase();
-        const showItem=searchTittle.includes(item.value.toLocaleLowerCase());
-        if(item.value.length>=2){
-          if(!showItem){
-            const div=element.closest('.item--product--descrp');
-            div.style.display="none";
-          }
-          
-        }else{
-          const div=element.closest('.item--product--descrp');
-          div.style.display="";
+function functionSearchItem(event) {
+  const item = event.target;
+
+  if (item) {
+    const titleItem = document.querySelectorAll(".tittle--text");
+    titleItem.forEach((element) => {
+      const searchTittle = element.textContent.toLocaleLowerCase();
+      const showItem = searchTittle.includes(item.value.toLocaleLowerCase());
+      if (item.value.length >= 2) {
+        if (!showItem) {
+          const div = element.closest(".item--product--descrp");
+          div.style.display = "none";
         }
-       
-      })
-
+      } else {
+        const div = element.closest(".item--product--descrp");
+        div.style.display = "";
+      }
+    });
   }
-
-
 }
 
-const itemCheckbox=document.querySelector('.dropdowncheck');
-let cont=1;
-itemCheckbox.addEventListener('click',functionCheck);
+const itemCheckbox = document.querySelector(".dropdowncheck");
+let cont = 1;
+itemCheckbox.addEventListener("click", functionCheck);
 
-function functionCheck(event){
+function functionCheck(event) {
   cont++;
-  const item=event.target;
-  const cont1=Number(cont);
-let ml=cont%2
-  const svgItem=document.querySelector('.svg--menu');
-    if(ml===0){
-   
-      svgItem.innerHTML="";
-      svgItem.innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(139, 67, 56, 1);transform: ;msFilter:;"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>`;
-    }if(ml===1){
-    
-      svgItem.innerHTML="";
-      svgItem.innerHTML=`<svg class="svg--menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(139, 67, 56, 1);transform: msFilter"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>`;
-    }
-    
+  const item = event.target;
+  const cont1 = Number(cont);
+  let ml = cont % 2;
+  const svgItem = document.querySelector(".svg--menu");
+  if (ml === 0) {
+    svgItem.innerHTML = "";
+    svgItem.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(139, 67, 56, 1);transform: ;msFilter:;"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>`;
+  }
+  if (ml === 1) {
+    svgItem.innerHTML = "";
+    svgItem.innerHTML = `<svg class="svg--menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(139, 67, 56, 1);transform: msFilter"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>`;
+  }
 }

@@ -1,179 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Analu</title>
-   <link rel="stylesheet" href="./style/style.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link
-   rel="stylesheet"
-   type="text/css"
-   href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
- />
- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-</head>
-<body>
-    <header class="header" >
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <a class="nav--img--a" href="./pages/index.html"
+          ><img src="./images/logoAnalu.png" alt="" class="nav--iconpage"
+        /></a>
 
-        <nav class="header__nav" >
+        <ul class="header__nav--ul">
+          <div class="check--menu">
+            <a class="filtre--item dropdownlink toggle--item"
+              ><span><br /></span
+              ><svg
+                class="svg--menu"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                style="fill: rgba(139, 67, 56, 1); transform: msFilter"
+              >
+                <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+              </svg>
+              <input type="checkbox" class="dropdowncheck" />
+            </a>
+          </div>
 
-            <a class="nav--img--a" href="./pages/index.html"><img src="./images/logoAnalu.png" alt="" class="nav--iconpage"></a>
-          
-
-            <ul class="header__nav--ul">
-                <div class="check--menu">
-                    <a  class="filtre--item dropdownlink toggle--item"><span><br></span><svg class="svg--menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(139, 67, 56, 1);transform: msFilter"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>    
-                        <input type="checkbox" class="dropdowncheck">
-                    </a>
-
-                </div>
-             
-
-
-                <div class="dopdownnav">
-                    <div class="dropdownsubnav">
-                        <li class="nav--ul--li" data-aos="fade-down" data-aos-delay="200">
-                            <a href="./pages/index.html" class="nav--ul-a">Inicio</a>
-                        </li>
-                        <li class="nav--ul--li" data-aos="fade-down" data-aos-delay="200">
-                            <a href="./pages/product.html" class="nav--ul-a">Productos</a>
-                        </li>
-                        <li class="nav--ul--li" data-aos="fade-down" data-aos-delay="200">
-                            <a href="#" class="nav--ul-a">Nosotros</a>
-                        </li>
-                        <li class="nav--ul--li li--cont" data-aos="fade-down" data-aos-delay="200">
-                            <a href="./pages/cart.html" class="nav--ul-a"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" style="fill: rgba(139, 67, 56, 1);transform: msFilter"><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></a>
-                            <span class="nav--ul-cant">0</span>
-                        </li>
-                        <li class="nav--ul--li nav--ul--profile" data-aos="fade-down" data-aos-delay="200">
-                            <a href="#" class="nav--ul-a"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: rgba(139, 67, 56, 1);transform: msFilter"><path d="M12 2A10.13 10.13 0 0 0 2 12a10 10 0 0 0 4 7.92V20h.1a9.7 9.7 0 0 0 11.8 0h.1v-.08A10 10 0 0 0 22 12 10.13 10.13 0 0 0 12 2zM8.07 18.93A3 3 0 0 1 11 16.57h2a3 3 0 0 1 2.93 2.36 7.75 7.75 0 0 1-7.86 0zm9.54-1.29A5 5 0 0 0 13 14.57h-2a5 5 0 0 0-4.61 3.07A8 8 0 0 1 4 12a8.1 8.1 0 0 1 8-8 8.1 8.1 0 0 1 8 8 8 8 0 0 1-2.39 5.64z"></path><path d="M12 6a3.91 3.91 0 0 0-4 4 3.91 3.91 0 0 0 4 4 3.91 3.91 0 0 0 4-4 3.91 3.91 0 0 0-4-4zm0 6a1.91 1.91 0 0 1-2-2 1.91 1.91 0 0 1 2-2 1.91 1.91 0 0 1 2 2 1.91 1.91 0 0 1-2 2z"></path></svg></a>
-                            <a href="#" class="title--profile">Usuario</a>
-                        </li>
-                    </div>
-                    
-                </div>
-                
-            </ul>
-           
-        </nav>
-
-
-    </header>    
-    
-    
-      <main class="main" >
-        <h1 class="main--title" data-aos="fade-down" data-aos-delay="200">Analu Pasteleria</h1>
-
-        <div class="slider" >
-            <div class="slider--opacity"></div>
-            <span class="tittle--ofertas" data-aos="fade-down" data-aos-delay="200">Ofertas Dia Del Padre 50%</span>
-            <div class="slider--inner" data-aos="fade-down" data-aos-delay="200">
-                <img class="img--slider" src="./images/img4.jpg" alt="">
-                <img class="img--slider img2" src="./images/img5.jpg" alt="">
-                <img class="img--slider img3" src="./images/img6.jpg" alt="">
+          <div class="dopdownnav">
+            <div class="dropdownsubnav">
+              <li class="nav--ul--li" data-aos="fade-down" data-aos-delay="200">
+                <a href="./pages/index.html" class="nav--ul-a">Inicio</a>
+              </li>
+              <li class="nav--ul--li" data-aos="fade-down" data-aos-delay="200">
+                <a href="./pages/product.html" class="nav--ul-a">Productos</a>
+              </li>
+              <li class="nav--ul--li" data-aos="fade-down" data-aos-delay="200">
+                <a href="#" class="nav--ul-a">Nosotros</a>
+              </li>
+              <li
+                class="nav--ul--li li--cont"
+                data-aos="fade-down"
+                data-aos-delay="200"
+              >
+                <a href="./pages/cart.html" class="nav--ul-a"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26"
+                    height="26"
+                    viewBox="0 0 24 24"
+                    style="fill: rgba(139, 67, 56, 1); transform: msFilter"
+                  >
+                    <path
+                      d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"
+                    ></path>
+                    <circle cx="10.5" cy="19.5" r="1.5"></circle>
+                    <circle cx="17.5" cy="19.5" r="1.5"></circle></svg
+                ></a>
+                <span class="nav--ul-cant">0</span>
+              </li>
+              <li
+                class="nav--ul--li nav--ul--profile"
+                data-aos="fade-down"
+                data-aos-delay="200"
+              >
+                <a href="#" class="nav--ul-a"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    style="fill: rgba(139, 67, 56, 1); transform: msFilter"
+                  >
+                    <path
+                      d="M12 2A10.13 10.13 0 0 0 2 12a10 10 0 0 0 4 7.92V20h.1a9.7 9.7 0 0 0 11.8 0h.1v-.08A10 10 0 0 0 22 12 10.13 10.13 0 0 0 12 2zM8.07 18.93A3 3 0 0 1 11 16.57h2a3 3 0 0 1 2.93 2.36 7.75 7.75 0 0 1-7.86 0zm9.54-1.29A5 5 0 0 0 13 14.57h-2a5 5 0 0 0-4.61 3.07A8 8 0 0 1 4 12a8.1 8.1 0 0 1 8-8 8.1 8.1 0 0 1 8 8 8 8 0 0 1-2.39 5.64z"
+                    ></path>
+                    <path
+                      d="M12 6a3.91 3.91 0 0 0-4 4 3.91 3.91 0 0 0 4 4 3.91 3.91 0 0 0 4-4 3.91 3.91 0 0 0-4-4zm0 6a1.91 1.91 0 0 1-2-2 1.91 1.91 0 0 1 2-2 1.91 1.91 0 0 1 2 2 1.91 1.91 0 0 1-2 2z"
+                    ></path></svg
+                ></a>
+                <a href="#" class="title--profile">Usuario</a>
+              </li>
             </div>
+          </div>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <h1 class="main--title" data-aos="fade-down" data-aos-delay="200">
+        Analu Pasteleria
+      </h1>
+
+      <div class="slider">
+        <div class="slider--opacity"></div>
+        <span class="tittle--ofertas" data-aos="fade-down" data-aos-delay="200"
+          >Ofertas Dia Del Padre 50%</span
+        >
+        <div class="slider--inner" data-aos="fade-down" data-aos-delay="200">
+          <img class="img--slider" src="./images/img4.jpg" alt="" />
+          <img class="img--slider img2" src="./images/img5.jpg" alt="" />
+          <img class="img--slider img3" src="./images/img6.jpg" alt="" />
         </div>
-        <h2 class="main--title" data-aos="fade-down" data-aos-delay="200">Nuestros Productos</h2>
-        <div class="main__div--products" data-aos="fade-down" data-aos-delay="200">
-
-            <div class="item--product--descrp">
-                <img src="./images/img7.jpg" alt="" class="image--cartHome" data-aos="fade-down" data-aos-delay="200">
-                <p class="item--product--descrp"data-aos="fade-down" data-aos-delay="100">Caja de bombones</p>
-                <button href="#" class="addtocartItem" data-aos="fade-down" data-aos-delay="100">Agregar al carrito</button>
-            </div>
-
-            <div class="item--product--descrp">
-                <img src="./images/imgcart2.jpg" alt="" class="image--cartHome" data-aos="fade-down" data-aos-delay="200">
-                <button  href="#" class="fav--icon--cart">
-                    <img class="img--fav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAXRJREFUSEvFVEGOgkAQrIbL4G0TvONLVl6ivkR9ie5Llp8sd0n2JnNY7U0j4MAAzrgxO4nRTEtVV3VThBcfejE+/ofgpNSSgmAF5iWAvFLJ/BFrfZSfhVJrBMH7WN10xVJQRNEnAAEeOll9OVwnOobX6/5N61tTQNeiDjjzJgSyHyAhIAHRFvLdnJE6M+/mWu8tgsoWIuk+j8ty0W//W6nkcq+nE/UEzJvGztaiYjY7gHnd78Bny05KbYloB6JjfD5vOhYVUcRyEZfl05tluJDFZVmpvCuIoi/xOGRemEPyUVDbKDitzZZFpn8+4PLf1iLAVmAU85A59VVhdA9mTudaVyvd8bsZtEj0IanBD/X703ZvERirKPvuRNIDt1bc2hgfkkfgloJmqC4kLuCjBFKYInEFnyQYI5H7C1Ez0MFYmUzTyYy5Rbd8qhgfyqz+806x0LNLMJzAH1pkdmP4LnllpenYW++kwDcyvGbwF3Avi54l+gViCvAZW/3vlQAAAABJRU5ErkJggg=="/>   </button>
-                   <button class="svg--icon"><img class="img--notfav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAR5JREFUSEvFlUEOgjAQRf/gprgzwb2eRD2JehLhJOJJ9Ca6l8SddKNjCkKEFilQY1ekbf7r/52hhB8P+rE+/gO4CrEkz1uDeQngkrlkPgRSxuozEWIDz1s0rX+mojlIfP8IQAmbxuk9aV4nikfPZzSRMj8UUI2oRdzqupg5nEoZaYAsFiJ1+uGDeVvEWUaUjMd7MG+Gq6tcKA7u920losT32Yl4LnIK0nRVB5wBzBxBLkGazqsAlxGZHFyF2BFR6MIBM6+mUmYlXekDRxdd5q8BbkLMHnmp9r2LMntjo6nJARBNXHNQUHtAjOKNgI5OGsW/AiwhX8VbAS2QVnErQAPEStwaUIOg+A3YNGWnJ1NV1+dj4hxgI1jf08lBH8ALdISGGdIfSR8AAAAASUVORK5CYII="/> </button>
-                <p class="item--product--descrp"data-aos="fade-down" data-aos-delay="100">Lemon pie</p>
-
-                <button href="#" class="addtocartItem" data-aos="fade-down" data-aos-delay="100">Agregar al carrito</button>    
-            </div>
-            <div class="item--product--descrp">
-                <img src="./images/imgcart3.jpg" alt="" class="image--cartHome" data-aos="fade-down" data-aos-delay="200">
-                <p class="item--product--descrp"data-aos="fade-down" data-aos-delay="100">Joystick de chocolate</p>
-                <button href="#" class="addtocartItem" data-aos="fade-down" data-aos-delay="100">Agregar al carrito</button>
-            </div>
-            <div class="item--product--descrp">
-                <img src="./images/imgcart4.jpg" alt="" class="image--cartHome" data-aos="fade-down" data-aos-delay="200">
-                <p class="item--product--descrp"data-aos="fade-down" data-aos-delay="100">Ramo de chocolate</p>
-                <button href="#" class="addtocartItem" data-aos="fade-down" data-aos-delay="100">Agregar al carrito</button>
-            </div>
-            
-         
-        </div>
-        <a href="./pages/product.html" class="item--product--ref--prd" data-aos="fade-down" data-aos-delay="100">VER MAS</a>
-        <div class="conteiner__coments">
-            <h4 class="title--coments" data-aos="fade-down" data-aos-delay="100">
-                Algunos comentarios
-
-            </h4>
-            <div class="conteiner__coments--people" >
-                <div class="coments--people" data-aos="fade-down" data-aos-delay="200">
-                    <p class="parraf--coments--people">
-                        Excelente atencion, encargue una mesa dulce para el cumpleaños de mi hijo y estuvo todo mas que excelente, los alfajores y los muffis son riquisimos     
-                    </p>
-                    <h5 class="people--name">-Marianela</h5>
-                </div>
-                <div class="coments--people" data-aos="fade-down" data-aos-delay="200">
-                    <p class="parraf--coments--people">
-                        Hermoso todo, encarge un ramo para regalar, el chocolate exquisito. El precio es accesible y el envio llego al tiempo acordado, lo recomiendo
-                    </p>
-                    <h5 class="people--name">-Facundo</h5>
-                </div>
-                <div class="coments--people" data-aos="fade-down" data-aos-delay="200">
-                    <p class="parraf--coments--people">
-                        Cumplio todas mis expectativas compre una torta y es riquisima, los rellenos super abundantes y el biscochuelo estaba muy rico
-                    </p>
-                    <h5 class="people--name">-Romina</h5>
-                    
-                </div>
-
-            </div>
-
-
+      </div>
+      <h2 class="main--title" data-aos="fade-down" data-aos-delay="200">
+        Nuestros Productos
+      </h2>
+      <div
+        class="main__div--products"
+        data-aos="fade-down"
+        data-aos-delay="200"
+      >
+        <div class="item--product--descrp">
+          <img
+            src="./images/img7.jpg"
+            alt=""
+            class="image--cartHome"
+            data-aos="fade-down"
+            data-aos-delay="200"
+          />
+          <p
+            class="item--product--descrp"
+            data-aos="fade-down"
+            data-aos-delay="100"
+          >
+            Caja de bombones
+          </p>
+          <button
+            href="#"
+            class="addtocartItem"
+            data-aos="fade-down"
+            data-aos-delay="100"
+          >
+            Agregar al carrito
+          </button>
         </div>
 
+        <div class="item--product--descrp">
+          <img
+            src="./images/imgcart2.jpg"
+            alt=""
+            class="image--cartHome"
+            data-aos="fade-down"
+            data-aos-delay="200"
+          />
+          <button href="#" class="fav--icon--cart">
+            <img
+              class="img--fav"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAXRJREFUSEvFVEGOgkAQrIbL4G0TvONLVl6ivkR9ie5Llp8sd0n2JnNY7U0j4MAAzrgxO4nRTEtVV3VThBcfejE+/ofgpNSSgmAF5iWAvFLJ/BFrfZSfhVJrBMH7WN10xVJQRNEnAAEeOll9OVwnOobX6/5N61tTQNeiDjjzJgSyHyAhIAHRFvLdnJE6M+/mWu8tgsoWIuk+j8ty0W//W6nkcq+nE/UEzJvGztaiYjY7gHnd78Bny05KbYloB6JjfD5vOhYVUcRyEZfl05tluJDFZVmpvCuIoi/xOGRemEPyUVDbKDitzZZFpn8+4PLf1iLAVmAU85A59VVhdA9mTudaVyvd8bsZtEj0IanBD/X703ZvERirKPvuRNIDt1bc2hgfkkfgloJmqC4kLuCjBFKYInEFnyQYI5H7C1Ez0MFYmUzTyYy5Rbd8qhgfyqz+806x0LNLMJzAH1pkdmP4LnllpenYW++kwDcyvGbwF3Avi54l+gViCvAZW/3vlQAAAABJRU5ErkJggg=="
+            />
+          </button>
+          <button class="svg--icon">
+            <img
+              class="img--notfav"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAR5JREFUSEvFlUEOgjAQRf/gprgzwb2eRD2JehLhJOJJ9Ca6l8SddKNjCkKEFilQY1ekbf7r/52hhB8P+rE+/gO4CrEkz1uDeQngkrlkPgRSxuozEWIDz1s0rX+mojlIfP8IQAmbxuk9aV4nikfPZzSRMj8UUI2oRdzqupg5nEoZaYAsFiJ1+uGDeVvEWUaUjMd7MG+Gq6tcKA7u920losT32Yl4LnIK0nRVB5wBzBxBLkGazqsAlxGZHFyF2BFR6MIBM6+mUmYlXekDRxdd5q8BbkLMHnmp9r2LMntjo6nJARBNXHNQUHtAjOKNgI5OGsW/AiwhX8VbAS2QVnErQAPEStwaUIOg+A3YNGWnJ1NV1+dj4hxgI1jf08lBH8ALdISGGdIfSR8AAAAASUVORK5CYII="
+            />
+          </button>
+          <p
+            class="item--product--descrp"
+            data-aos="fade-down"
+            data-aos-delay="100"
+          >
+            Lemon pie
+          </p>
 
-        <footer class="footer" data-aos="fade-down" data-aos-delay="100">
-            <div class="div--opacity--footer"></div>
-            <div class="div--footer--img" data-aos="fade-down" data-aos-delay="200">
-                    <img src="./images/imgfooter.jpg" alt="" class="footer--img">
-            </div>
-            
-            <div class="div--footer--items" >
-                <p class="footer--title" data-aos="fade-down" data-aos-delay="200">¡Esparce tu felicidad hoy! </p>
-                <div class="footer--content--div">
+          <button
+            href="#"
+            class="addtocartItem"
+            data-aos="fade-down"
+            data-aos-delay="100"
+          >
+            Agregar al carrito
+          </button>
+        </div>
+        <div class="item--product--descrp">
+          <img
+            src="./images/imgcart3.jpg"
+            alt=""
+            class="image--cartHome"
+            data-aos="fade-down"
+            data-aos-delay="200"
+          />
+          <p
+            class="item--product--descrp"
+            data-aos="fade-down"
+            data-aos-delay="100"
+          >
+            Joystick de chocolate
+          </p>
+          <button
+            href="#"
+            class="addtocartItem"
+            data-aos="fade-down"
+            data-aos-delay="100"
+          >
+            Agregar al carrito
+          </button>
+        </div>
+        <div class="item--product--descrp">
+          <img
+            src="./images/imgcart4.jpg"
+            alt=""
+            class="image--cartHome"
+            data-aos="fade-down"
+            data-aos-delay="200"
+          />
+          <p
+            class="item--product--descrp"
+            data-aos="fade-down"
+            data-aos-delay="100"
+          >
+            Ramo de chocolate
+          </p>
+          <button
+            href="#"
+            class="addtocartItem"
+            data-aos="fade-down"
+            data-aos-delay="100"
+          >
+            Agregar al carrito
+          </button>
+        </div>
+      </div>
+      <a
+        href="./pages/product.html"
+        class="item--product--ref--prd"
+        data-aos="fade-down"
+        data-aos-delay="100"
+        >VER MAS</a
+      >
+      <div class="conteiner__coments">
+        <h4 class="title--coments" data-aos="fade-down" data-aos-delay="100">
+          Algunos comentarios
+        </h4>
+        <div class="conteiner__coments--people">
+          <div
+            class="coments--people"
+            data-aos="fade-down"
+            data-aos-delay="200"
+          >
+            <p class="parraf--coments--people">
+              Excelente atencion, encargue una mesa dulce para el cumpleaños de
+              mi hijo y estuvo todo mas que excelente, los alfajores y los
+              muffis son riquisimos
+            </p>
+            <h5 class="people--name">-Marianela</h5>
+          </div>
+          <div
+            class="coments--people"
+            data-aos="fade-down"
+            data-aos-delay="200"
+          >
+            <p class="parraf--coments--people">
+              Hermoso todo, encarge un ramo para regalar, el chocolate
+              exquisito. El precio es accesible y el envio llego al tiempo
+              acordado, lo recomiendo
+            </p>
+            <h5 class="people--name">-Facundo</h5>
+          </div>
+          <div
+            class="coments--people"
+            data-aos="fade-down"
+            data-aos-delay="200"
+          >
+            <p class="parraf--coments--people">
+              Cumplio todas mis expectativas compre una torta y es riquisima,
+              los rellenos super abundantes y el biscochuelo estaba muy rico
+            </p>
+            <h5 class="people--name">-Romina</h5>
+          </div>
+        </div>
+      </div>
 
-                    <p class="footer--content" data-aos="fade-down" data-aos-delay="200"><span>DIRECCION</span><br><br>La Rioja 80<br>Villa Mercedes - San Luis (ARG)</p>
-                    <p class="footer--content" data-aos="fade-down" data-aos-delay="200"><span>CORREO ELECTRONICO</span><br><br>analu99@gmail.com</p>
-                    <p class="footer--content" data-aos="fade-down" data-aos-delay="200"><span>TELEFONO DE CONTACTO</span><br><br>(54) 2657 314542</p>
-                </div>
+      <footer class="footer" data-aos="fade-down" data-aos-delay="100">
+        <div class="div--opacity--footer"></div>
+        <div class="div--footer--img" data-aos="fade-down" data-aos-delay="200">
+          <img src="./images/imgfooter.jpg" alt="" class="footer--img" />
+        </div>
 
-                <div class="footer--content--div--icon">
-                   <a href="#" ><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: msFilter"><path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path></svg></a> 
-                   <a href="#" ><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: msFilter"><path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"></path></svg></a> 
-                   <a href="#" ><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: msFilter"><path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"></path></svg></a> 
-                </div>
-               
-            </div>
+        <div class="div--footer--items">
+          <p class="footer--title" data-aos="fade-down" data-aos-delay="200">
+            ¡Esparce tu felicidad hoy!
+          </p>
+          <div class="footer--content--div">
+            <p
+              class="footer--content"
+              data-aos="fade-down"
+              data-aos-delay="200"
+            >
+              <span>DIRECCION</span><br /><br />La Rioja 80<br />Villa Mercedes
+              - San Luis (ARG)
+            </p>
+            <p
+              class="footer--content"
+              data-aos="fade-down"
+              data-aos-delay="200"
+            >
+              <span>CORREO ELECTRONICO</span><br /><br />analu99@gmail.com
+            </p>
+            <p
+              class="footer--content"
+              data-aos="fade-down"
+              data-aos-delay="200"
+            >
+              <span>TELEFONO DE CONTACTO</span><br /><br />(54) 2657 314542
+            </p>
+          </div>
 
-        </footer>
-      </main>  
-
+          <div class="footer--content--div--icon">
+            <a href="#"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                viewBox="0 0 24 24"
+                style="fill: rgba(255, 255, 255, 1); transform: msFilter"
+              >
+                <path
+                  d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"
+                ></path>
+                <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                <path
+                  d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"
+                ></path></svg
+            ></a>
+            <a href="#"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                viewBox="0 0 24 24"
+                style="fill: rgba(255, 255, 255, 1); transform: msFilter"
+              >
+                <path
+                  d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"
+                ></path></svg
+            ></a>
+            <a href="#"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                viewBox="0 0 24 24"
+                style="fill: rgba(255, 255, 255, 1); transform: msFilter"
+              >
+                <path
+                  d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"
+                ></path></svg
+            ></a>
+          </div>
+        </div>
+      </footer>
+    </main>
 
     <script src="./scripts/main.js"></script>
     <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/toastify-js"
-  ></script>
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
 
-  <script>
-    AOS.init();
-  </script>
-</body>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
