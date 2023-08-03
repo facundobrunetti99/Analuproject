@@ -8,10 +8,16 @@ extraerProductos();
 let cart = [];
 
 if (localStorage.length > 0) {
-  cart = JSON.parse(localStorage.getItem("cart"));
-  cantCartProduct = cart.length;
   let cantItemCart = document.querySelector(".nav--ul-cant");
-  cantItemCart.textContent = cantCartProduct;
+  
+  cart = JSON.parse(localStorage.getItem("cart"));
+   if(cart!=null){
+    cantCartProduct = cart.length;
+
+   }else{
+    cantItemCart=0;
+   }
+   cantItemCart.textContent = cantCartProduct;
 }
 
 let products = [];
