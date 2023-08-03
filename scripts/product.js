@@ -1,5 +1,5 @@
 const extraerProductos = async () => {
-  const resp = await fetch("/JSON/catalog.json");
+  const resp = await fetch("../JSON/catalog.json");
   const data = await resp.json();
   cargarProductos(data);
 };
