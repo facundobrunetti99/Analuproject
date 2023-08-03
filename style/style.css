@@ -1085,9 +1085,7 @@ font-size: 15px;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 }
-
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 425px){
     .header__nav--ul{
         display: grid;
         grid-template-columns: 1fr;
@@ -1149,7 +1147,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 .conteiner--catalog{
     width: 80%;
     display: grid;
-    grid-template-columns:1fr 1fr ;
+    grid-template-columns:1fr ;
    
     justify-items: center;
     align-items: center;
@@ -1405,11 +1403,7 @@ font-size: 15px;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 }
-
-
-
-
-@media screen and (max-width: 425px){
+@media screen and (min-width: 500px){
     .header__nav--ul{
         display: grid;
         grid-template-columns: 1fr;
@@ -1471,7 +1465,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 .conteiner--catalog{
     width: 80%;
     display: grid;
-    grid-template-columns:1fr ;
+    grid-template-columns:1fr 1fr ;
    
     justify-items: center;
     align-items: center;
