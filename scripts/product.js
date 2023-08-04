@@ -130,25 +130,28 @@ function addTocart(id) {
     indexCart = -1;
   }
 
-  products.forEach((product) => {
-    if (indexCart === -1 && Number(product.id) === id) {
-      cart.push(product);
-      let itemLS = JSON.stringify(cart);
-      localStorage.setItem("cart", itemLS);
-    } else {
-      cart.forEach((element, i) => {
-        if (band1 === false) {
-          if (idItemCart === Number(element.id)) {
-            element.cant++;
-
-            band1 = true;
-          } else {
-            band1 = false;
+  if(cart.length!=0){
+    products.forEach((product) => {
+      if (indexCart === -1 && Number(product.id) === id) {
+        cart.push(product);
+        let itemLS = JSON.stringify(cart);
+        localStorage.setItem("cart", itemLS);
+      } else {
+        cart.forEach((element, i) => {
+          if (band1 === false) {
+            if (idItemCart === Number(element.id)) {
+              element.cant++;
+  
+              band1 = true;
+            } else {
+              band1 = false;
+            }
           }
-        }
-      });
-    }
-  });
+        });
+      }
+    });
+  }
+ 
 
   const itemLS = JSON.stringify(cart);
   localStorage.setItem("cart", itemLS);
