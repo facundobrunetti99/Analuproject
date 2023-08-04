@@ -130,7 +130,7 @@ function addTocart(id) {
     indexCart = -1;
   }
 
-  if(cart.length!=0){
+
     products.forEach((product) => {
       if (indexCart === -1 && Number(product.id) === id) {
         cart.push(product);
@@ -150,7 +150,7 @@ function addTocart(id) {
         });
       }
     });
-  }
+  
  
 
   const itemLS = JSON.stringify(cart);
