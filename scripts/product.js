@@ -10,7 +10,7 @@ if (localStorage.length > 0) {
   let cantItemCart = document.querySelector(".nav--ul-cant");
   let cantCartProduct = 0;
   cart = JSON.parse(localStorage.getItem("cart"));
-  if (cart != null) {
+  if (cart.length != 0) {
     cantCartProduct = cart.length;
   } else {
     cantItemCart = 0;
@@ -113,7 +113,7 @@ function addTocart(id) {
   let band1 = false;
   let idItemCart;
 
-  if (cart != null) {
+  if (cart.length != 0) {
     cart.forEach((element) => {
       if (band === true) {
         if (Number(element.id) === id) {
