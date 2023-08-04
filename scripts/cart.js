@@ -1,11 +1,20 @@
 let cartLs = JSON.parse(localStorage.getItem("cart"));
 const cotainerCart = document.querySelector(".container__cart--item");
 let total = 0;
+let cart=[];
+let cantCartProduct;
 function cartNumber() {
-  cart = JSON.parse(localStorage.getItem("cart"));
-  cantCartProduct = cart.length;
-  let cantItemCart = document.querySelector(".nav--ul-cant");
-  cantItemCart.textContent = cantCartProduct;
+  if(cart.length>0){
+    cart = JSON.parse(localStorage.getItem("cart"));
+    cantCartProduct = cartLs.length;
+    let cantItemCart = document.querySelector(".nav--ul-cant");
+    cantItemCart.textContent = cantCartProduct;
+  }else{
+    let cantItemCart = document.querySelector(".nav--ul-cant");
+    cantCartProduct = cartLs.length;
+    cantItemCart.textContent = cantCartProduct;
+  }
+
 }
 
 if (localStorage.length > 0) {
@@ -13,18 +22,12 @@ if (localStorage.length > 0) {
   cartNumber();
 
   cartLs.forEach((element) => {
-    if(element.name.length>=10){
-      let name=element.name;
-     itemName=name.slice(0,-4);
-     itemName+="...";
-    }else{
-      itemName=element.name;
-    }
+  
     const itemCart = document.createElement("div");
 
     itemCart.className = "cart--item";
     itemCart.innerHTML = `<img src="${element.img}" alt="" class="cart--img">
-        <p class="cart--item--description">${itemName}</p>
+        <p class="cart--item--description">${element.name}</p>
         <p class="cart--price">$${element.price}</p>
        <div class="conteiner--cant--element">
        <button class="button--rest"  onClick="decreaseItemCart(${element.id})">-</button>
@@ -154,7 +157,7 @@ function itemCartOut() {
   const cartConteiner = document.querySelector(".container__cart--item");
   console.log(conteinerLength);
   if (conteinerLength >= 5) {
-    cartConteiner.style.height = "800px";
+    cartConteiner.style.height = "700px";
     cartConteiner.style.overflowY = "scroll";
   }
 }
@@ -172,6 +175,8 @@ function addItemCart(id) {
           const itemAdd = elementAdd.parentElement;
           const addElement = itemAdd.querySelector(".input--value");
           addElement.value++;
+          console.log(addElement)
+          
         }
       });
     }

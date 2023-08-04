@@ -1168,66 +1168,61 @@
   }
 
   /*cartQueries*/
-  .main--cart{
+  .main--cart {
     display: flex;
     flex-direction: column;
   }
-  .main__cart--container{
+  .main__cart--container {
     width: 100%;
   }
-  .cart--tittles h6{
+  .cart--tittles h6 {
     font-size: 12px;
     width: 100%;
     text-align: center;
-   
   }
-  .cart--item{
+  .cart--item {
     padding: 10px 0;
   }
-  .cart--tittles{
+  .cart--tittles {
     display: flex;
   }
-  .cart--img{
+  .cart--img {
     width: 70px;
     height: 70px;
   }
-  .cart--item--description{
+  .cart--item--description {
     font-size: 10px;
   }
-  .cart--price{
+  .cart--price {
     font-size: 10px;
   }
-  .button--rest{
-    
+  .button--rest {
     width: 12px;
     height: 12px;
-
     margin-bottom: 7px;
     font-size: 12px !important;
   }
-  .button--add{
+  .button--add {
     width: 10px;
-    height: 10px; 
+    height: 10px;
 
-margin-top: 7px;
-font-size: 12px !important;
-
-}
-.input--value{
-  width: 100%;
-  height: 10px;
-  margin-right: 8px;
-  text-align: end;
-  font-size: 10px;
-}
-  .conteiner--cant--element input{
+    margin-top: 7px;
+    font-size: 12px !important;
+  }
+  .input--value {
+    width: 100%;
+    height: 10px;
+    margin-right: 8px;
+    text-align: end;
+    font-size: 10px;
+  }
+  .conteiner--cant--element input {
     width: 40px;
     height: 10px;
     font-size: 10px;
- 
   }
-  .conteiner--cant--element{
   
+  .conteiner--cant--element {
     display: flex;
     flex-direction: column;
 
@@ -1235,29 +1230,28 @@ font-size: 12px !important;
     width: 100%;
     align-items: flex-end;
   }
- .cart-button--delete{
-  width: 20px;
-  height: 20px;
-
-  
- }
- .div--button--delete{
-  display: flex;
-  width: 90%;
-  flex-direction: row-reverse;
- }
- .cart--sending{
-  width: 100%;
- }
- .cart-sending--form{
-  font-size: 12px;
- }
- .total--price--cont{
-  font-size: 15px;
- }
- .total--pago{
-  font-size: 15px;
- }
+  .cart-button--delete {
+    width: 20px;
+    height: 20px;
+  }
+  .div--button--delete {
+    display: flex;
+    width: 90%;
+    flex-direction: row-reverse;
+  }
+  .cart--sending {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .cart-sending--form {
+    font-size: 12px;
+  }
+  .total--price--cont {
+    font-size: 15px;
+  }
+  .total--pago {
+    font-size: 15px;
+  }
 }
 @media screen and (min-width: 767px) {
   .header__nav--ul {
@@ -1536,6 +1530,95 @@ font-size: 12px !important;
     font-size: 15px;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
+
+
+  /*QueriesCart*/
+
+  .main--cart {
+    display: flex;
+    flex-direction: column;
+  }
+  .main__cart--container {
+    width: 100%;
+  }
+  .cart--tittles h6 {
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+  }
+  .cart--item {
+    padding: 10px 0;
+  }
+  .cart--tittles {
+    display: flex;
+  }
+  .cart--img {
+    width: 70px;
+    height: 70px;
+  }
+  .cart--item--description {
+    font-size: 10px;
+  }
+  .cart--price {
+    font-size: 10px;
+  }
+  .button--rest {
+    width: 12px;
+    height: 12px;
+    margin-bottom: 7px;
+    font-size: 12px !important;
+  }
+  .button--add {
+    width: 10px;
+    height: 10px;
+
+    margin-top: 7px;
+    font-size: 12px !important;
+  }
+  .input--value {
+    width: 100%;
+    height: 10px;
+    margin-right: 8px;
+    text-align: end;
+    font-size: 10px;
+  }
+  .conteiner--cant--element input {
+    width: 40px;
+    height: 10px;
+    font-size: 10px;
+  }
+  
+  .conteiner--cant--element {
+    display: flex;
+    flex-direction: column;
+
+    border: none;
+    width: 100%;
+    align-items: flex-end;
+  }
+  .cart-button--delete {
+    width: 20px;
+    height: 20px;
+  }
+  .div--button--delete {
+    display: flex;
+    width: 90%;
+    flex-direction: row-reverse;
+  }
+  .cart--sending {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .cart-sending--form {
+    font-size: 12px;
+  }
+  .total--price--cont {
+    font-size: 15px;
+  }
+  .total--pago {
+    font-size: 15px;
   }
 }
 
@@ -2027,97 +2110,90 @@ font-size: 12px !important;
   /*Cart*/
   .main--cart {
     display: flex;
-    margin: 10px;
+    flex-direction: row;
   }
-
   .main__cart--container {
-    display: flex;
-    width: 75%;
-    border: 1px solid var(--bck--color);
-    padding: 10px;
-    flex-direction: column;
-  }
-  .cart--tittles {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1.15fr 1fr 1fr 1fr;
-    justify-items: space-around;
+  }
+  .cart--sending{
+    width: 40% !important;
+    margin: auto;
+    margin-left: 10px;
+    height: 756px;
+  }
+  .cart--tittles h6 {
+    font-size: 12px;
+    width: 100%;
     text-align: center;
-    padding: 10px;
-  }
-  .cart--title {
-    font-size: 18px;
-    color: var(--color--text);
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  }
-  .cart--sending {
-    width: 25%;
-    border: 1px solid var(--bck--color);
-    margin-left: 5px;
-    padding: 10px;
-  }
-  .cart--img {
-    width: 150px;
-    height: 150px;
-    border-radius: 7px;
-    object-fit: cover;
-  }
-  .container__cart--item {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
   }
   .cart--item {
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr 1fr 1fr 1fr;
-    justify-items: center;
-    padding: 15px;
-    align-items: center;
+    padding: 10px 0;
+  }
+  .cart--tittles {
+    display: flex;
+  }
+  .cart--img {
+    width: 100px;
+    height:100px;
   }
   .cart--item--description {
-    padding: 5px;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    font-size: 18px;
+    font-size: 14px;
   }
   .cart--price {
-    padding: 5px;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 14px;
   }
-  .conteiner--cant--element {
-    border: 1px solid var(--bck--color);
-    padding: 5px;
+  .button--rest {
+    width: 12px;
+    height: 12px;
+    margin-bottom: 7px;
+    font-size: 14px !important;
   }
-  .conteiner--cant--element button {
-    width: 20px;
-    height: 20px;
-    border: none;
-    background-color: #fff;
-    cursor: pointer;
-    font-size: 22px;
-    color: #0c8b12;
-  }
+  .button--add {
+    width: 10px;
+    height: 10px;
 
+    margin-top: 7px;
+    font-size: 14px !important;
+  }
   .input--value {
+    width: 100%;
+    height: 10px;
+    margin-right: 8px;
+    text-align: end;
+    font-size: 14px;
+  }
+  .conteiner--cant--element input {
+    width: 40px;
+    height: 10px;
+    font-size: 14px;
+  }
+  
+  .conteiner--cant--element {
+    display: flex;
+    flex-direction: column;
+
     border: none;
-    width: 30px;
-    text-align: center;
-    height: 20px;
-    outline: none;
+    width: 100%;
+    align-items: flex-end;
   }
   .cart-button--delete {
-    width: 50px;
-    height: 30px;
-    background-color: #fff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    z-index: 5;
+    width: 20px;
+    height: 20px;
   }
-  .cart-button--delete svg {
-    z-index: -1;
+  .div--button--delete {
+    display: flex;
+    width: 90%;
+    flex-direction: row-reverse;
+  }
+ 
+  .cart-sending--form {
+    font-size: 12px;
+  }
+  .total--price--cont {
+    font-size: 15px;
+  }
+  .total--pago {
+    font-size: 15px;
   }
 
   /*Form*/
@@ -2675,97 +2751,90 @@ font-size: 12px !important;
   /*Cart*/
   .main--cart {
     display: flex;
-    margin: 10px;
+    flex-direction: row;
   }
-
   .main__cart--container {
-    display: flex;
-    width: 75%;
-    border: 1px solid var(--bck--color);
-    padding: 10px;
-    flex-direction: column;
-  }
-  .cart--tittles {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1.15fr 1fr 1fr 1fr;
-    justify-items: space-around;
+  }
+  .cart--sending{
+    width: 40% !important;
+    margin: auto;
+    margin-left: 10px;
+    height: 756px;
+  }
+  .cart--tittles h6 {
+    font-size: 12px;
+    width: 100%;
     text-align: center;
-    padding: 10px;
-  }
-  .cart--title {
-    font-size: 18px;
-    color: var(--color--text);
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  }
-  .cart--sending {
-    width: 25%;
-    border: 1px solid var(--bck--color);
-    margin-left: 5px;
-    padding: 10px;
-  }
-  .cart--img {
-    width: 150px;
-    height: 150px;
-    border-radius: 7px;
-    object-fit: cover;
-  }
-  .container__cart--item {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
   }
   .cart--item {
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr 1fr 1fr 1fr;
-    justify-items: center;
-    padding: 15px;
-    align-items: center;
+    padding: 10px 0;
+  }
+  .cart--tittles {
+    display: flex;
+  }
+  .cart--img {
+    width: 100px;
+    height:100px;
   }
   .cart--item--description {
-    padding: 5px;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    font-size: 18px;
+    font-size: 14px;
   }
   .cart--price {
-    padding: 5px;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 14px;
   }
-  .conteiner--cant--element {
-    border: 1px solid var(--bck--color);
-    padding: 5px;
+  .button--rest {
+    width: 12px;
+    height: 12px;
+    margin-bottom: 7px;
+    font-size: 14px !important;
   }
-  .conteiner--cant--element button {
-    width: 20px;
-    height: 20px;
-    border: none;
-    background-color: #fff;
-    cursor: pointer;
-    font-size: 22px;
-    color: #0c8b12;
-  }
+  .button--add {
+    width: 10px;
+    height: 10px;
 
+    margin-top: 7px;
+    font-size: 14px !important;
+  }
   .input--value {
+    width: 100%;
+    height: 10px;
+    margin-right: 8px;
+    text-align: end;
+    font-size: 14px;
+  }
+  .conteiner--cant--element input {
+    width: 40px;
+    height: 10px;
+    font-size: 14px;
+  }
+  
+  .conteiner--cant--element {
+    display: flex;
+    flex-direction: column;
+
     border: none;
-    width: 30px;
-    text-align: center;
-    height: 20px;
-    outline: none;
+    width: 100%;
+    align-items: flex-end;
   }
   .cart-button--delete {
-    width: 50px;
-    height: 30px;
-    background-color: #fff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    z-index: 5;
+    width: 20px;
+    height: 20px;
   }
-  .cart-button--delete svg {
-    z-index: -1;
+  .div--button--delete {
+    display: flex;
+    width: 90%;
+    flex-direction: row-reverse;
+  }
+ 
+  .cart-sending--form {
+    font-size: 12px;
+  }
+  .total--price--cont {
+    font-size: 15px;
+  }
+  .total--pago {
+    font-size: 15px;
   }
 
   /*Form*/
