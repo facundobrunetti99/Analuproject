@@ -113,7 +113,7 @@ function addTocart(id) {
   let band1 = false;
   let idItemCart;
 
-  if (cart.length != 0) {
+  if (cart != null) {
     cart.forEach((element) => {
       if (band === true) {
         if (Number(element.id) === id) {
