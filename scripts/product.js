@@ -66,36 +66,9 @@ function addItemsCatalog(name, id, img, price) {
     <button href="#" onClick="addTocart(${id})"  class="addtocartItem">Agregar al carrito</button>`;
   conteinerItemsProduct.appendChild(divAddCat);
 
-  const favItem = document.querySelectorAll(".fav--icon--cart");
-  const notFavItem = document.querySelectorAll(".svg--icon");
-  notFavItem.forEach((element) => {
-    element.addEventListener("click", functionNotFav);
-  });
-  favItem.forEach((element) => {
-    element.addEventListener("click", functionFav);
-  });
+  
+ 
 }
-let badFav = true;
-function functionFav(event) {
-  badFav = false;
-  const itemFav = event.target;
-  const divFav = itemFav.closest(".item--product--contai");
-  const heartFav = divFav.querySelector(".svg--icon");
-  itemFav.style.display = "none";
-  heartFav.style.display = "block";
-}
-let badNotFav = true;
-
-function functionNotFav(event) {
-  badNotFav = false;
-  const itemFav = event.target;
-  const divNotFav = itemFav.closest(".item--product--contai");
-  const notFavItem = divNotFav.querySelector(".svg--icon");
-  const FavItem = divNotFav.querySelector(".img--fav");
-  FavItem.style.display = "block";
-  notFavItem.style.display = "none";
-}
-
 let indexCart = 0;
 let cantItem = 0;
 let cantLS;
@@ -112,7 +85,6 @@ function addTocart(id) {
   let band = true;
   let band1 = false;
   let idItemCart;
-
   if (cart.length != 0) {
     cart.forEach((element) => {
       if (band === true) {
@@ -129,22 +101,17 @@ function addTocart(id) {
   } else {
     indexCart = -1;
   }
-
-
     products.forEach((product) => {
       if (indexCart === -1 && Number(product.id) === id) {
         cart.push(product);
         let itemLS = JSON.stringify(cart);
         localStorage.setItem("cart", itemLS);
       } else {
-        cart.forEach((element, i) => {
+        cart.forEach((element) => {
           if (band1 === false) {
             if (idItemCart === Number(element.id)) {
               element.cant++;
-  
               band1 = true;
-            } else {
-              band1 = false;
             }
           }
         });
